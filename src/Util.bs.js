@@ -11,13 +11,10 @@ function getAbsolutePath(path) {
 }
 
 function printDir(dirPath) {
-  var absolutePath = Path.resolve(__dirname, dirPath);
-  var contentArray = Fs.readdirSync(absolutePath);
-  var contentList = $$Array.to_list(contentArray);
-  return List.iter((function (item) {
-                console.log("name: " + item);
+  return List.iter((function (dir) {
+                console.log("name: " + dir);
                 return /* () */0;
-              }), contentList);
+              }), $$Array.to_list(Fs.readdirSync(Path.resolve(__dirname, dirPath))));
 }
 
 exports.getAbsolutePath = getAbsolutePath;

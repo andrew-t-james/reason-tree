@@ -1,1 +1,1 @@
-Js.log(Util.printDir("../"));
+Js.log(Util.printDir(0, ~ignore=".git", "../"));

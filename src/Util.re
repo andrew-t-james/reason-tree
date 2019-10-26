@@ -26,9 +26,9 @@ let rec printDir = (padding: int, ~ignore=?, dirPath: string) => {
   |> filterListItem(~ignore?)
   |> List.iter((item: Fs.dirent) =>
        if (!item##isDirectory()) {
-         {js|?|js} ++ " " ++ item##name |> padText(padding) |> Js.log;
+         {js|📄|js} ++ " " ++ item##name |> padText(padding) |> Js.log;
        } else {
-         {js|?|js} ++ " " ++ item##name |> padText(padding) |> Js.log;
+         {js|📂|js} ++ " " ++ item##name |> padText(padding) |> Js.log;
          printDir(padding + 1, ~ignore?, absolutePath ++ "/" ++ item##name);
        }
      );

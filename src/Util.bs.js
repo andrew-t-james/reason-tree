@@ -37,10 +37,10 @@ function printDir(padding, ignore, dirPath) {
   };
   return List.iter((function (item) {
                 if (item.isDirectory()) {
-                  console.log(padText(padding, "?" + (" " + item.name)));
+                  console.log(padText(padding, "📂" + (" " + item.name)));
                   return printDir(padding + 1 | 0, ignore, absolutePath + ("/" + item.name));
                 } else {
-                  console.log(padText(padding, "?" + (" " + item.name)));
+                  console.log(padText(padding, "📄" + (" " + item.name)));
                   return /* () */0;
                 }
               }), filterListItem(ignore, $$Array.to_list(Fs.readdirSync(absolutePath, options))));

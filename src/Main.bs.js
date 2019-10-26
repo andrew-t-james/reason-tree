@@ -3,6 +3,6 @@
 
 var Util$ReasonTree = require("./Util.bs.js");
 
-console.log(Util$ReasonTree.printDir(0, ".git", "../"));
+console.log(Util$ReasonTree.printDir(0, "node_modules", "../"));
 
 /*  Not a pure module */

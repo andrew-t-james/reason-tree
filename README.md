@@ -4,15 +4,11 @@
 
 
 ```
-├── README.md
-├── bin
-|  └── tree
-├── node_modules
-|  ├── bluebird
-|  ├── chalk
-|  ├── cli-spinner
-|  ├── meow
-|  └── object-assign
-├── package.json
-└── tree.js
+📂 src
+ 📄 Fs.bs.js
+ 📄 Fs.re
+ 📄 Main.bs.js
+ 📄 Main.re
+ 📄 Util.bs.js
+ 📄 Util.re
 ```

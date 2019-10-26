@@ -12,9 +12,13 @@ let getAbsolutePath = (path: string) => {
 // }
 
 let printDir = (dirPath: string) => {
-  dirPath
-  |> getAbsolutePath
-  |> Node.Fs.readdirSync
+  let absolutePath = getAbsolutePath(dirPath);
+  let options = Fs.readdirSyncOptions(~withFileTypes=true, ());
+
+  Fs.readdirSync(absolutePath, options)
   |> Array.to_list
-  |> List.iter((dir: string) => Js.log("name: " ++ dir));
+  |> List.iter((item: Fs.dirent) => {
+       let prefix = item##isDirectory() ? {js|?|js} : {js|?|js};
+       Js.log(prefix ++ " " ++ item##name);
+     });
 };

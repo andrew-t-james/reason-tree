@@ -1,7 +1,7 @@
-[@bs.deriving abstract];
+[@bs.deriving abstract]
 type readdirSyncOptions = {
   [@bs.optional]
-  withFiletypes: bool,
+  withFileTypes: bool,
 };
 
 type dirent = {

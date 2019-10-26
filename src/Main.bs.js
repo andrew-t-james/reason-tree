@@ -3,6 +3,6 @@
 
 var Util$ReasonTree = require("./Util.bs.js");
 
-console.log(Util$ReasonTree.printDir("./"));
+console.log(Util$ReasonTree.printDir("../"));
 
 /*  Not a pure module */
